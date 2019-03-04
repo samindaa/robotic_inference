@@ -182,12 +182,21 @@ We have randomly selected a image from each category and observed the inference 
 %For demonstrating your results, it is incredibly useful to have some charts, tables, and/or graphs for the reader to review. This makes ingesting the information quicker and easier.
 
 \section{Discussion}
+
+GoogLeNet has obtained $100$\% accuracy on the validation set for the selected categories of the  Amazon Picking Challenge dataset. This is a welcoming sign as the images of interest are occupy relatively smaller area compared the whole image (Fig. \ref{fig:p2}). Based on the findings, we could assume that 600 images per category is enough for the setup inference problem. The Amazon Picking Challenge dataset contains 27 categories, and it is interesting to observe the performance using all categories. 
+
+We have decided to use GoogLeNet because of its performance under strict constraints on memory and computational budget. VGGNet yield similar results to GoogLeNet, but, evaluating the network requires a lot of computation \cite{44903}. The next generation of GoogLeNet, Inception-v3, has shown state-of-the-art performance on the ILSVRC 2012 classification benchmark \cite{44903}. 
+
 %This is the only section of the report where you may include your opinion. However, make sure your opinion is based on facts. If your results are poor, make mention of what may be the underlying issues. If the results are good, why do you think this is the case? Again, avoid writing in the first person (i.e. Do not use words like “I” or “me”). If you really find yourself struggling to avoid the word “I” or “me”; sometimes, this can be avoid with the use of the word “one”. As an example: instead of : “I think the accuracy on my dataset is low because the images are too small to show the necessary detail” try: “one may believe the accuracy on the dataset is low because the images are too small to show the necessary detail”. They say the same thing, but the second avoids the first person. 
 %Reflect on which is more important, inference time or accuracy, in regards to your robotic inference project.
 
 \section{Conclusion / Future work}
 %This section is intended to summarize your report. Your summary should include a recap of the results, did this project achieve what you attempted, and is this a commercially viable product? 
 %For Future work,address areas of work that you may not have addressed in your report as possible next steps. For future work, this could be due to time constraints, lack of currently developed methods / technology, and areas of application outside of your current implementation. Again, avoid the use of the first-person.
+
+In this project, we have trained a deep convolutional neural network GoogLeNet on two datasets using DIGITS workflow. We have shown that the model has achieved over $75$\% accuracy on Udacity dataset. The model has performed well on the  Amazon Picking Challenge dataset, and achieved $100$\% on the validation set. 
+
+DIGITS workflow provides a set of convenient tools to quickly prototype a deep model, and to promote such models to production use or deploy on a Jetson TX2 board. In addition, workflows can be set of other tasks, such as segmentation. The  Amazon Picking Challenge dataset contains  training examples for such tasks, and very well can be used develop robotic applications.   
 
 \bibliography{bib}
 \bibliographystyle{ieeetr}
